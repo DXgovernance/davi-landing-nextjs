@@ -35,7 +35,7 @@
  }
  
  .floating-dxdao {
-   left: 10px;
+   right: 10px;
    bottom: 10px;
    position: absolute;
    height: 159px;
@@ -71,12 +71,10 @@
    line-height: 3rem;
    font-weight: 500;
    margin-bottom: 0px;
-   /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
  }
  
  .main-text-subtitle {
    font-size: 2rem;
-   /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
  }
  
  .button {
@@ -84,6 +82,11 @@
    border-radius: 50px;
    color: rgb(255, 255, 255);
    border: 1px solid transparent;
+ }
+ .button:focus {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  box-shadow: none;
  }
  
  .button:hover {

@@ -37,15 +37,15 @@ export default function Home() {
         <main role="main" class="cover">
           <div class="modal-body row">
             <div class="main-text-container col-md-6">
-              <div class="heading-main-text">
+              <p class="heading-main-text">
                 THE NEXT GENERATION OF DAO GOVERNANCE
-              </div>
-              <div class="main-text-body">
+              </p>
+              <p class="main-text-body">
                 A decentralized on-chain governance interface for DAOs.
-              </div>
-              <div class="main-text-subtitle">
+              </p>
+              <p class="main-text-subtitle">
                 Bringing accessible autonomy to the masses
-              </div>
+              </p>
               <Link
                 href="https://app.projectdavi.eth.limo/#/"
                 class="button btn btn-primary btn-lg"
@@ -70,12 +70,12 @@ export default function Home() {
               class="info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <div class="info-box-title">Create action packed proposals</div>
-              <div class="info-box-description">
+              <p class="info-box-title">Create action packed proposals</p>
+              <p class="info-box-description">
                 DAVI makes on-chain governance <strong> accessible</strong>,
                 whether building proposals or voting on them,
                 <strong>everybody</strong> can partake in governance.
-              </div>
+              </p>
             </div>
           </article>
           <article class="modal-body row info-box-article">
@@ -85,11 +85,11 @@ export default function Home() {
               class="black-90-mobile info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <div class="info-box-title">YOUR DAO YOUR WAY</div>
-              <div class="info-box-description">
+              <p class="info-box-title">YOUR DAO YOUR WAY</p>
+              <p class="info-box-description">
                 DAVI supports multiple type of DAOs. From normal ERC20, to
                 soulbound, even a hybrid system.
-                <strong>handle it your way</strong> with DAVI.
+                <strong>Handle it your way</strong> with DAVI.
                 <br />
                 <strong> Want your DAO on DAVI?</strong>{" "}
                 <Link
@@ -100,7 +100,7 @@ export default function Home() {
                 >
                   let us know
                 </Link>
-              </div>
+              </p>
             </div>
             <img
               src="/black-90.png"
@@ -115,23 +115,23 @@ export default function Home() {
               class="info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <div class="info-box-title">Social</div>
-              <div class="info-box-description">
+              <p class="info-box-title">Social</p>
+              <p class="info-box-description">
                 DAVI recognizes that not everything can be on chain. So we also
                 include a built in forum closely integrated with governance.
                 <br />
                 Built on orbis and ceramic, decentralization is at the core of
                 what we do.
-              </div>
+              </p>
             </div>
           </div>
         </section>
       </div>
       <section class="socials">
         <div class="bottom-modal-top">
-          <div class="sub-titles">Fully Decentralized</div>
-          <div class="sub-title-primary">Autonomy for all communities</div>
-          <div class="sub-titles">Your DAO your way</div>
+          <p class="sub-titles">Fully Decentralized</p>
+          <p class="sub-title-primary">Autonomy for all communities</p>
+          <p class="sub-titles">Your DAO your way</p>
         </div>
         <div class="bottom-modal-bottom">
           <div class="modal-body row info-box-article">
@@ -141,17 +141,17 @@ export default function Home() {
               class="black-90-desktop info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <div class="info-box-title">
+              <p class="info-box-title">
                 Want to see what a DAO can really do?
-              </div>
-              <div class="info-box-description">
+              </p>
+              <p class="info-box-description">
                 If you are intrigued by accessible autonomy, flexibility to
                 choose your DAO platform or integrated community tools then give
                 it a go.
                 <br />
-                {/* DXdao's vision to enable community freedom is being lead by
-                  DAVI and we want you to be one of those communities */}
-              </div>
+                DXdao's vision to enable community freedom is being lead by DAVI
+                and we want you to be one of those communities
+              </p>
               <Link
                 href="https://app.projectdavi.eth.limo/#/"
                 class="button btn btn-primary btn-lg"
