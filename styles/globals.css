@@ -41,7 +41,7 @@
    height: 159px;
    width: 32px;
    z-index: 9;
-   background-image: url('../public/dxdaoarrow.svg');
+   background-image: url('./../public/dxdaoarrow.svg');
  }
  
  .square-container-desktop {
@@ -134,7 +134,7 @@
  }
  
  .socials {
-   background-image: url('../public/bg-circles.png');
+   background-image: url('./../public/bg-circles.png');
    background-size: cover;
    height: 100vh;
    /* display: grid;
