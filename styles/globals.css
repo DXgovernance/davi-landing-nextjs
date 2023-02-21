@@ -35,17 +35,17 @@
  }
  
  .floating-dxdao {
-   right: 10px;
-   bottom: 10px;
+   background-image: url('./../public/dxdaoarrow.svg');
+   right: 20px;
+   bottom: 45%;
    position: absolute;
    height: 159px;
    width: 32px;
    z-index: 9;
-   background-image: url('./../public/dxdaoarrow.svg');
  }
  
  .square-container-desktop {
-   text-align: right;
+   text-align: center;
  }
  
  .square-container-mobile {
@@ -54,6 +54,7 @@
  
  .square-img {
    width: 80%;
+   margin: auto;
  }
  
  .main-text-container {
