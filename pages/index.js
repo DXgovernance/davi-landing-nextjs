@@ -149,8 +149,8 @@ export default function Home() {
                 choose your DAO platform or integrated community tools then give
                 it a go.
                 <br />
-                DXdao's vision to enable community freedom is being lead by DAVI
-                and we want you to be one of those communities
+                {`DXdao's vision to enable community freedom is being lead by DAVI
+                and we want you to be one of those communities`}
               </p>
               <Link
                 href="https://app.projectdavi.eth.limo/#/"
