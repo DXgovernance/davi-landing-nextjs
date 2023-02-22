@@ -1,8 +1,39 @@
 import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedTab, setSelectedTab] = useState(1);
+
+  const tabContent = [
+    {
+      title: "Fully Decentralized",
+      subtitle: "Decentralized but for real",
+      body1: "On chain governance as a first class citizen.",
+      body2:
+        "With RPC backups ontop decentralized subgraph and even our discussions using orbis and ceramic",
+      button: "Try real decentralization",
+    },
+    {
+      title: "Autonomy for all Communities",
+      subtitle: "Want to see what a DAO can really do?",
+      body1:
+        "If you are intrigued by accessible autonomy, flexibility to choose your DAO platform or integrated community tools then give it a go.",
+      body2:
+        "DXdao's vision to enable community freedom is being lead by DAVI and we want you to be one of those communities",
+      button: "Enable your community",
+    },
+    {
+      title: "Your DAO your Way",
+      subtitle: "Have specific needs?",
+      body1: "There are a lot of DAO solutions out there, DAVI aims to .",
+      body2:
+        "From liquid ERC20 governance, to soulbound reputation, hybrid systems and even more coming soon.",
+      button: "Choose your DAO",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -68,6 +99,7 @@ export default function Home() {
               src="/black-62.png"
               alt="black-hat"
               class="info-box-item col-md-6"
+              onClick={() => console.log("go to dxdao limo")}
             />
             <div class="col-md-6 info-box-item">
               <p class="info-box-title">Create action packed proposals</p>
@@ -127,43 +159,16 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section class="socials">
+      <section class="learn-more">
         <div class="bottom-modal-top">
-          <p class="sub-titles">Fully Decentralized</p>
-          <p class="sub-title-primary">Autonomy for all communities</p>
-          <p class="sub-titles">Your DAO your way</p>
+          <TabHeadings
+            content={tabContent}
+            active={selectedTab}
+            changeTab={setSelectedTab}
+          />
         </div>
         <div class="bottom-modal-bottom">
-          <div class="modal-body row info-box-article">
-            <img
-              src="/black-90.png"
-              alt="black-circles"
-              class="black-90-desktop info-box-item col-md-6"
-            />
-            <div class="col-md-6 info-box-item">
-              <p class="info-box-title">
-                Want to see what a DAO can really do?
-              </p>
-              <p class="info-box-description">
-                If you are intrigued by accessible autonomy, flexibility to
-                choose your DAO platform or integrated community tools then give
-                it a go.
-                <br />
-                {`DXdao's vision to enable community freedom is being lead by DAVI
-                and we want you to be one of those communities`}
-              </p>
-              <Link
-                href="https://app.projectdavi.eth.limo/#/"
-                class="button btn btn-primary btn-lg"
-                role="button"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Enable sovereignty for your community
-                <img src="/arrow.png" alt="arrow" class="arrow" />
-              </Link>
-            </div>
-          </div>
+          <TabContent content={tabContent[selectedTab]} />
         </div>
       </section>
       <div class="socials-section">
@@ -304,5 +309,52 @@ export default function Home() {
         </div>
       </footer>
     </>
+  );
+}
+
+function TabHeadings({ content, active, changeTab }) {
+  return content.map((contentObj, index) => (
+    <p
+      onClick={() => changeTab(index)}
+      key={index}
+      class={active === index ? "sub-title-primary" : "sub-titles"}
+    >
+      {contentObj.title}
+    </p>
+  ));
+}
+
+function TabContent({ content }) {
+  return (
+    <div class="modal-body row info-box-article">
+      <img
+        src="/black-90.png"
+        alt="black-circles"
+        class="black-90-desktop info-box-item col-md-6"
+      />
+      <img
+        src="/black-90.png"
+        alt="black-circles"
+        class="black-90-mobile info-box-item col-md-6"
+      />
+      <div class="col-md-6 info-box-item">
+        <p class="info-box-title">{content.subtitle}</p>
+        <p class="info-box-description">
+          {content.body1}
+          <br />
+          {content.body2}
+        </p>
+        <Link
+          href="https://app.projectdavi.eth.limo/#/"
+          class="button btn btn-primary btn-lg"
+          role="button"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {content.button}
+          <img src="/arrow.png" alt="arrow" class="arrow" />
+        </Link>
+      </div>
+    </div>
   );
 }

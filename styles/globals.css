@@ -137,19 +137,14 @@
    display: none;
  }
  
- .socials {
+ .learn-more {
    background-image: url('./../public/bg-circles.png');
    background-size: cover;
    height: 100vh;
-   /* display: grid;
-   place-items: center; */
-   /* align-items: center;
-   justify-content: center; */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
  }
  
  .socials-section {
@@ -192,13 +187,15 @@
  .sub-titles {
    color: #DFFD56;
    font-family: 'Inter';
- font-style: normal;
- font-weight: 500;
- font-size: 32px;
- line-height: 108.02%;
- display: flex;
- flex-wrap: wrap;
- width: 30%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 108.02%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    padding: 24px;
+    cursor: pointer;
  }
  
  .sub-title-primary {
@@ -282,6 +279,13 @@
  }
  
  @media screen and (max-width: 600px) {
+
+    .floating-dxdao {
+      right: 20px;
+      bottom: 65%;
+      height: 159px;
+      width: 32px;
+    }
    .title-image {
      padding: 20px;
    }
@@ -290,6 +294,7 @@
    }
    .square-container-mobile {
      display: block;
+     width: 80%;
    }
    .square-img {
      width: 100%;
@@ -327,6 +332,7 @@
    }
    .black-90-mobile {
      display: block;
+     width: 80%;
    }
  
    .socials-section {
@@ -349,5 +355,70 @@
      margin: 30px 30px;
      width: 70%;
    }
+   .learn-more {
+      height: auto;
+      padding: 10% 0%
+   }
+   .bottom-modal-top {
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0;
+     padding: 32px;
+     gap: 23px;
+   
+     width: 90%;
+     height: auto;
+   
+     background: #000000;
+     border-radius: 32px 32px 0px 0px;
+   }
+   .sub-titles {
+    color: #DFFD56;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 108.02%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+   }
+  .sub-title-primary {
+    width: 100%;
+    padding: 24px;
+    gap: 0px;
+  }
+  .bottom-modal-bottom {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+  
+    width: 90%;
+  
+    background: #DFFD56;
+    border-radius: 0px 0px 32px 32px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .link-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6px;
+    height: 200px;
+    margin: auto;
+    width: 90%
+  }
+  .separator {
+    width: 100%;
+  }
+  
  }
  
