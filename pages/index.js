@@ -41,7 +41,7 @@ export default function Home() {
       </header>
       <div
         class="floating-dxdao"
-        onClick={() => router.replace("https://dxdao.eth.limo")}
+        onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
       ></div>
       <div class="square-container-mobile">
         <img src="/squares.png" alt="square-davi" class="square-img" />
