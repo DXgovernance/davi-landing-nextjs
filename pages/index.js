@@ -2,9 +2,12 @@ import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState(1);
+  const { t } = useTranslation();
 
   const tabContent = [
     {
@@ -68,9 +71,7 @@ export default function Home() {
         <main role="main" class="cover">
           <div class="modal-body row">
             <div class="main-text-container col-md-6">
-              <p class="heading-main-text">
-                THE NEXT GENERATION OF DAO GOVERNANCE
-              </p>
+              <p class="heading-main-text">{t("test")}</p>
               <p class="main-text-body">
                 A decentralized on-chain governance interface for DAOs.
               </p>
@@ -357,4 +358,13 @@ function TabContent({ content }) {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "footer"])),
+      // Will be passed to the page component as props
+    },
+  };
 }
