@@ -50,7 +50,7 @@ export default function Home() {
         <main role="main" class="cover">
           <div class="modal-body row">
             <div class="main-text-container col-md-6">
-              <p class="heading-main-text">{t("nextGen")}</p>
+              {/* <p class="heading-main-text">{t("nextGen")}</p> */}
               <p class="main-text-body">{t("title")}</p>
               <p class="main-text-subtitle">{t("subTitle")}</p>
               <Link
@@ -80,9 +80,12 @@ export default function Home() {
               <p class="info-box-title">
                 {t("featureHighlights.actionBuilder.title")}
               </p>
-              <p class="info-box-description">
-                {t("featureHighlights.actionBuilder.description")}
-              </p>
+              <div
+                class="info-box-description"
+                dangerouslySetInnerHTML={{
+                  __html: t("featureHighlights.actionBuilder.description"),
+                }}
+              />
             </div>
           </article>
           <article class="modal-body row info-box-article">
@@ -95,8 +98,12 @@ export default function Home() {
               <p class="info-box-title">
                 {t("featureHighlights.flexible.title")}
               </p>
-              <p class="info-box-description">
-                {t("featureHighlights.flexible.description")}
+              <div class="info-box-description">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: t("featureHighlights.flexible.description"),
+                  }}
+                />
                 <Link
                   href="https://davi.canny.io"
                   role="button"
@@ -105,7 +112,7 @@ export default function Home() {
                 >
                   {t("featureHighlights.flexible.extra")}
                 </Link>
-              </p>
+              </div>
             </div>
             <img
               src="/black-90.png"
@@ -123,9 +130,12 @@ export default function Home() {
               <p class="info-box-title">
                 {t("featureHighlights.social.title")}
               </p>
-              <p class="info-box-description">
-                {t("featureHighlights.social.description")}
-              </p>
+              <div
+                class="info-box-description"
+                dangerouslySetInnerHTML={{
+                  __html: t("featureHighlights.social.description"),
+                }}
+              />
             </div>
           </div>
         </section>

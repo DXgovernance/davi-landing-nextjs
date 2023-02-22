@@ -66,17 +66,19 @@
  .heading-main-text {
    font-weight: bolder;
    font-size: 1rem;
+   margin-bottom: 24px;
  }
  
  .main-text-body {
    font-size: 3rem;
    line-height: 3rem;
    font-weight: 500;
-   margin-bottom: 0px;
+   margin-bottom: 12px;
  }
  
  .main-text-subtitle {
    font-size: 2rem;
+   margin-bottom: 24px;
  }
  
  .button {
