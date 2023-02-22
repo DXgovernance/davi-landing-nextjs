@@ -42,6 +42,7 @@
    height: 159px;
    width: 32px;
    z-index: 9;
+   cursor: pointer;
  }
  
  .square-container-desktop {
@@ -89,9 +90,13 @@
   color: rgb(255, 255, 255);
   box-shadow: none;
  }
- 
+ .button:active {
+  background-color: #dffd56;
+  color: rgb(0, 0, 0);
+  box-shadow: none;
+ }
  .button:hover {
-   color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
    background-color: #fff;
    border: 1px solid #000;
  }

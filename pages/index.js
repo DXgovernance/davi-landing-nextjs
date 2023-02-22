@@ -4,43 +4,19 @@ import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState(1);
   const { t } = useTranslation();
+  const router = useRouter();
 
-  const tabContent = [
-    {
-      title: "Fully Decentralized",
-      subtitle: "Decentralized but for real",
-      body1: "On chain governance as a first class citizen.",
-      body2:
-        "With RPC backups ontop decentralized subgraph and even our discussions using orbis and ceramic",
-      button: "Try real decentralization",
-    },
-    {
-      title: "Autonomy for all Communities",
-      subtitle: "Want to see what a DAO can really do?",
-      body1:
-        "If you are intrigued by accessible autonomy, flexibility to choose your DAO platform or integrated community tools then give it a go.",
-      body2:
-        "DXdao's vision to enable community freedom is being lead by DAVI and we want you to be one of those communities",
-      button: "Enable your community",
-    },
-    {
-      title: "Your DAO your Way",
-      subtitle: "Have specific needs?",
-      body1: "There are a lot of DAO solutions out there, DAVI aims to .",
-      body2:
-        "From liquid ERC20 governance, to soulbound reputation, hybrid systems and even more coming soon.",
-      button: "Choose your DAO",
-    },
-  ];
+  const tabContent = ["decentralization", "autonomy", "flexible"];
 
   return (
     <>
       <Head>
-        <title>Project DAVI</title>
+        <title>{t("projectDavi")}</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -63,7 +39,10 @@ export default function Home() {
           class="title-image"
         />
       </header>
-      <div class="floating-dxdao"></div>
+      <div
+        class="floating-dxdao"
+        onClick={() => router.replace("https://dxdao.eth.limo")}
+      ></div>
       <div class="square-container-mobile">
         <img src="/squares.png" alt="square-davi" class="square-img" />
       </div>
@@ -71,13 +50,9 @@ export default function Home() {
         <main role="main" class="cover">
           <div class="modal-body row">
             <div class="main-text-container col-md-6">
-              <p class="heading-main-text">{t("test")}</p>
-              <p class="main-text-body">
-                A decentralized on-chain governance interface for DAOs.
-              </p>
-              <p class="main-text-subtitle">
-                Bringing accessible autonomy to the masses
-              </p>
+              <p class="heading-main-text">{t("nextGen")}</p>
+              <p class="main-text-body">{t("title")}</p>
+              <p class="main-text-subtitle">{t("subTitle")}</p>
               <Link
                 href="https://app.projectdavi.eth.limo/#/"
                 class="button btn btn-primary btn-lg"
@@ -85,7 +60,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                TRY THE DAPP
+                {t("cta")}
                 <img src="/arrow.png" alt="arrow" class="arrow" />
               </Link>
             </div>
@@ -100,14 +75,13 @@ export default function Home() {
               src="/black-62.png"
               alt="black-hat"
               class="info-box-item col-md-6"
-              onClick={() => console.log("go to dxdao limo")}
             />
             <div class="col-md-6 info-box-item">
-              <p class="info-box-title">Create action packed proposals</p>
+              <p class="info-box-title">
+                {t("featureHighlights.actionBuilder.title")}
+              </p>
               <p class="info-box-description">
-                DAVI makes on-chain governance <strong> accessible</strong>,
-                whether building proposals or voting on them,
-                <strong>everybody</strong> can partake in governance.
+                {t("featureHighlights.actionBuilder.description")}
               </p>
             </div>
           </article>
@@ -118,20 +92,18 @@ export default function Home() {
               class="black-90-mobile info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <p class="info-box-title">YOUR DAO YOUR WAY</p>
+              <p class="info-box-title">
+                {t("featureHighlights.flexible.title")}
+              </p>
               <p class="info-box-description">
-                DAVI supports multiple type of DAOs. From normal ERC20, to
-                soulbound, even a hybrid system.
-                <strong>Handle it your way</strong> with DAVI.
-                <br />
-                <strong> Want your DAO on DAVI?</strong>{" "}
+                {t("featureHighlights.flexible.description")}
                 <Link
                   href="https://davi.canny.io"
                   role="button"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  let us know
+                  {t("featureHighlights.flexible.extra")}
                 </Link>
               </p>
             </div>
@@ -148,13 +120,11 @@ export default function Home() {
               class="info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
-              <p class="info-box-title">Social</p>
+              <p class="info-box-title">
+                {t("featureHighlights.social.title")}
+              </p>
               <p class="info-box-description">
-                DAVI recognizes that not everything can be on chain. So we also
-                include a built in forum closely integrated with governance.
-                <br />
-                Built on orbis and ceramic, decentralization is at the core of
-                what we do.
+                {t("featureHighlights.social.description")}
               </p>
             </div>
           </div>
@@ -166,10 +136,11 @@ export default function Home() {
             content={tabContent}
             active={selectedTab}
             changeTab={setSelectedTab}
+            t={t}
           />
         </div>
         <div class="bottom-modal-bottom">
-          <TabContent content={tabContent[selectedTab]} />
+          <TabContent content={tabContent[selectedTab]} t={t} />
         </div>
       </section>
       <div class="socials-section">
@@ -313,19 +284,19 @@ export default function Home() {
   );
 }
 
-function TabHeadings({ content, active, changeTab }) {
+function TabHeadings({ content, active, changeTab, t }) {
   return content.map((contentObj, index) => (
     <p
       onClick={() => changeTab(index)}
       key={index}
       class={active === index ? "sub-title-primary" : "sub-titles"}
     >
-      {contentObj.title}
+      {t(`tabContent.${contentObj}.title`)}
     </p>
   ));
 }
 
-function TabContent({ content }) {
+function TabContent({ content, t }) {
   return (
     <div class="modal-body row info-box-article">
       <img
@@ -339,11 +310,11 @@ function TabContent({ content }) {
         class="black-90-mobile info-box-item col-md-6"
       />
       <div class="col-md-6 info-box-item">
-        <p class="info-box-title">{content.subtitle}</p>
+        <p class="info-box-title">{t(`tabContent.${content}.subtitle`)}</p>
         <p class="info-box-description">
-          {content.body1}
+          {t(`tabContent.${content}.body1`)}
           <br />
-          {content.body2}
+          {t(`tabContent.${content}.body2`)}
         </p>
         <Link
           href="https://app.projectdavi.eth.limo/#/"
@@ -352,7 +323,7 @@ function TabContent({ content }) {
           target="_blank"
           rel="noreferrer"
         >
-          {content.button}
+          {t(`tabContent.${content}.button`)}
           <img src="/arrow.png" alt="arrow" class="arrow" />
         </Link>
       </div>
