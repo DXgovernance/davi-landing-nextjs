@@ -301,7 +301,7 @@
 
     .floating-dxdao {
       right: 20px;
-      bottom: 65%;
+      bottom: 60%;
       height: 159px;
       width: 32px;
     }
@@ -393,18 +393,10 @@
      border-radius: 32px 32px 0px 0px;
    }
    .sub-titles {
-    color: #DFFD56;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 108.02%;
     width: 100%;
    }
   .sub-title-primary {
     width: 100%;
-    padding: 24px;
-    gap: 0px;
   }
   .bottom-modal-bottom {
     display: flex;

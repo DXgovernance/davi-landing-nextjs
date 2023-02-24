@@ -44,7 +44,7 @@ export default function Home() {
         onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
       ></div>
       <div class="square-container-mobile">
-        <img src="/squares.png" alt="square-davi" class="square-img" />
+        <img src="/400px.gif" alt="square-davi" class="square-img" />
       </div>
       <div class="container-fluid d-flex h-100 w-80 mx-auto flex-column">
         <main role="main" class="cover">
