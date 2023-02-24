@@ -65,15 +65,15 @@ export default function Home() {
               </Link>
             </div>
             <div class="square-container-desktop col-md-6">
-              <img src="/squares.png" alt="square-davi" class="square-img" />
+              <img src="/400px.gif" alt="square-davi" class="square-img" />
             </div>
           </div>
         </main>
         <section class="info-box-section">
           <article class="modal-body row info-box-article">
             <img
-              src="/black-62.png"
-              alt="black-hat"
+              src="/mac1.png"
+              alt="mac-screenshot"
               class="info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
@@ -90,8 +90,8 @@ export default function Home() {
           </article>
           <article class="modal-body row info-box-article">
             <img
-              src="/black-90.png"
-              alt="black-circles"
+              src="/mac2.png"
+              alt="mac-screenshot"
               class="black-90-mobile info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
@@ -115,15 +115,15 @@ export default function Home() {
               </div>
             </div>
             <img
-              src="/black-90.png"
-              alt="black-circles"
+              src="/mac2.png"
+              alt="mac-screenshot"
               class="black-90-desktop info-box-item col-md-6"
             />
           </article>
           <div class="modal-body row info-box-article">
             <img
-              src="/black-7.png"
-              alt="black-7"
+              src="/mac3.png"
+              alt="mac-screenshot"
               class="info-box-item col-md-6"
             />
             <div class="col-md-6 info-box-item">
@@ -295,14 +295,22 @@ export default function Home() {
 }
 
 function TabHeadings({ content, active, changeTab, t }) {
+  console.log({ active });
   return content.map((contentObj, index) => (
-    <p
-      onClick={() => changeTab(index)}
+    <div
       key={index}
+      onClick={() => changeTab(index)}
       class={active === index ? "sub-title-primary" : "sub-titles"}
     >
-      {t(`tabContent.${contentObj}.title`)}
-    </p>
+      <img
+        src={`/${index}-${active === index ? "black" : "green"}.svg`}
+        class="header-icon"
+        alt="header-icon"
+      />
+      <p key={index} style={{ margin: "auto" }}>
+        {t(`tabContent.${contentObj}.title`)}
+      </p>
+    </div>
   ));
 }
 
