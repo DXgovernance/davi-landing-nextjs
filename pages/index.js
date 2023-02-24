@@ -3,8 +3,7 @@ import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation, LanguageSwitcher } from "next-export-i18n";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -333,13 +332,4 @@ function TabContent({ content, t }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "footer"])),
-      // Will be passed to the page component as props
-    },
-  };
 }
