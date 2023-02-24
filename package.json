@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,6 +13,7 @@
     "eslint-config-next": "13.1.6",
     "i18next": "^22.4.10",
     "next": "13.1.6",
+    "next-export-i18n": "^2.1.0",
     "next-i18next": "^13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
