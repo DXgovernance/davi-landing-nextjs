@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
@@ -17,88 +18,74 @@ export default function Home() {
     <>
       <Head>
         <title>{t("projectDavi")}</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta charset="utf-8" />
-        <meta name="description" content="DAVI Landing" />
-        <link rel="icon" href="/favicon.ico" />
-
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossorigin="anonymous"
-        />
       </Head>
       <header>
         <img
           src="/project_davi_logo_black.svg"
           alt="project-davi"
-          class="title-image"
+          className="title-image"
         />
       </header>
       <div
-        class="floating-dxdao"
+        className="floating-dxdao"
         onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
       ></div>
-      <div class="square-container-mobile">
-        <img src="/400px.gif" alt="square-davi" class="square-img" />
+      <div className="square-container-mobile">
+        <img src="/400px.gif" alt="square-davi" className="square-img" />
       </div>
-      <div class="container-fluid d-flex h-100 w-80 mx-auto flex-column">
-        <main role="main" class="cover">
-          <div class="modal-body row">
-            <div class="main-text-container col-md-6">
-              {/* <p class="heading-main-text">{t("nextGen")}</p> */}
-              <p class="main-text-body">{t("title")}</p>
-              <p class="main-text-subtitle">{t("subTitle")}</p>
+      <div className="container-fluid d-flex h-100 w-80 mx-auto flex-column">
+        <main role="main" className="cover">
+          <div className="modal-body row">
+            <div className="main-text-container col-md-6">
+              {/* <p className="heading-main-text">{t("nextGen")}</p> */}
+              <p className="main-text-body">{t("title")}</p>
+              <p className="main-text-subtitle">{t("subTitle")}</p>
               <Link
                 href="https://app.projectdavi.eth.limo/#/"
-                class="button btn btn-primary btn-lg"
+                className="button btn btn-primary btn-lg"
                 role="button"
                 target="_blank"
                 rel="noreferrer"
               >
                 {t("cta")}
-                <img src="/arrow.png" alt="arrow" class="arrow" />
+                <img src="/arrow.png" alt="arrow" className="arrow" />
               </Link>
             </div>
-            <div class="square-container-desktop col-md-6">
-              <img src="/400px.gif" alt="square-davi" class="square-img" />
+            <div className="square-container-desktop col-md-6">
+              <img src="/400px.gif" alt="square-davi" className="square-img" />
             </div>
           </div>
         </main>
-        <section class="info-box-section">
-          <article class="modal-body row info-box-article">
+        <section className="info-box-section">
+          <article className="modal-body row info-box-article">
             <img
               src="/mac1.png"
               alt="mac-screenshot"
-              class="info-box-item col-md-6"
+              className="info-box-item col-md-6"
             />
-            <div class="col-md-6 info-box-item">
-              <p class="info-box-title">
+            <div className="col-md-6 info-box-item">
+              <p className="info-box-title">
                 {t("featureHighlights.actionBuilder.title")}
               </p>
               <div
-                class="info-box-description"
+                className="info-box-description"
                 dangerouslySetInnerHTML={{
                   __html: t("featureHighlights.actionBuilder.description"),
                 }}
               />
             </div>
           </article>
-          <article class="modal-body row info-box-article">
+          <article className="modal-body row info-box-article">
             <img
               src="/mac2.png"
               alt="mac-screenshot"
-              class="black-90-mobile info-box-item col-md-6"
+              className="black-90-mobile info-box-item col-md-6"
             />
-            <div class="col-md-6 info-box-item">
-              <p class="info-box-title">
+            <div className="col-md-6 info-box-item">
+              <p className="info-box-title">
                 {t("featureHighlights.flexible.title")}
               </p>
-              <div class="info-box-description">
+              <div className="info-box-description">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: t("featureHighlights.flexible.description"),
@@ -117,21 +104,21 @@ export default function Home() {
             <img
               src="/mac2.png"
               alt="mac-screenshot"
-              class="black-90-desktop info-box-item col-md-6"
+              className="black-90-desktop info-box-item col-md-6"
             />
           </article>
-          <div class="modal-body row info-box-article">
+          <div className="modal-body row info-box-article">
             <img
               src="/mac3.png"
               alt="mac-screenshot"
-              class="info-box-item col-md-6"
+              className="info-box-item col-md-6"
             />
-            <div class="col-md-6 info-box-item">
-              <p class="info-box-title">
+            <div className="col-md-6 info-box-item">
+              <p className="info-box-title">
                 {t("featureHighlights.social.title")}
               </p>
               <div
-                class="info-box-description"
+                className="info-box-description"
                 dangerouslySetInnerHTML={{
                   __html: t("featureHighlights.social.description"),
                 }}
@@ -140,8 +127,8 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section class="learn-more">
-        <div class="bottom-modal-top">
+      <section className="learn-more">
+        <div className="bottom-modal-top">
           <TabHeadings
             content={tabContent}
             active={selectedTab}
@@ -149,46 +136,46 @@ export default function Home() {
             t={t}
           />
         </div>
-        <div class="bottom-modal-bottom">
+        <div className="bottom-modal-bottom">
           <TabContent content={tabContent[selectedTab]} t={t} />
         </div>
       </section>
-      <div class="socials-section">
+      <div className="socials-section">
         <Link
           href="https://twitter.com/ProjectDAVI"
-          class="btn-social button btn btn-primary btn-lg"
+          className="btn-social button btn btn-primary btn-lg"
           role="button"
           target="_blank"
           rel="noreferrer"
         >
           TWITTER
-          <img src="/arrow.png" alt="arrow" class="arrow" />
+          <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
         <Link
           href="https://discord.gg/4QXEJQkvHH"
-          class="btn-social button btn btn-primary btn-lg"
+          className="btn-social button btn btn-primary btn-lg"
           role="button"
           target="_blank"
           rel="noreferrer"
         >
           DISCORD
-          <img src="/arrow.png" alt="arrow" class="arrow" />
+          <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
         <Link
           href="https://github.com/DXgovernance"
-          class="btn-social button btn btn-primary btn-lg"
+          className="btn-social button btn btn-primary btn-lg"
           role="button"
           target="_blank"
           rel="noreferrer"
         >
           GITHUB
-          <img src="/arrow.png" alt="arrow" class="arrow" />
+          <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
       </div>
-      <footer class="footer">
-        <div class="link-block">
+      <footer className="footer">
+        <div className="link-block">
           <h2>ABOUT</h2>
-          <span class="separator"></span>
+          <span className="separator"></span>
           <Link
             href="https://github.com/DXgovernance"
             role="button"
@@ -221,11 +208,11 @@ export default function Home() {
           >
             Suggest a feature
           </Link>
-          <span class="separator"></span>
+          <span className="separator"></span>
         </div>
-        <div class="link-block">
+        <div className="link-block">
           <h2>SOCIAL</h2>
-          <span class="separator"></span>
+          <span className="separator"></span>
           <Link
             href="https://twitter.com/ProjectDAVI"
             role="button"
@@ -250,11 +237,11 @@ export default function Home() {
           >
             Keybase
           </Link>
-          <span class="separator"></span>
+          <span className="separator"></span>
         </div>
-        <div class="link-block">
+        <div className="link-block">
           <h2>THE TEAM</h2>
-          <span class="separator"></span>
+          <span className="separator"></span>
           <Link
             href="https://app.projectdavi.eth.limo/#/gnosis/0x3f842726188FcD932d43bcA291be28138228e6D9/"
             role="button"
@@ -287,7 +274,7 @@ export default function Home() {
           >
             DXdao
           </Link>
-          <span class="separator"></span>
+          <span className="separator"></span>
         </div>
       </footer>
     </>
@@ -295,16 +282,15 @@ export default function Home() {
 }
 
 function TabHeadings({ content, active, changeTab, t }) {
-  console.log({ active });
   return content.map((contentObj, index) => (
     <div
       key={index}
       onClick={() => changeTab(index)}
-      class={active === index ? "sub-title-primary" : "sub-titles"}
+      className={active === index ? "sub-title-primary" : "sub-titles"}
     >
       <img
         src={`/${index}-${active === index ? "black" : "green"}.svg`}
-        class="header-icon"
+        className="header-icon"
         alt="header-icon"
       />
       <p key={index} style={{ margin: "auto" }}>
@@ -316,33 +302,33 @@ function TabHeadings({ content, active, changeTab, t }) {
 
 function TabContent({ content, t }) {
   return (
-    <div class="modal-body row info-box-article">
+    <div className="modal-body row info-box-article">
       <img
         src="/black-90.png"
         alt="black-circles"
-        class="black-90-desktop info-box-item col-md-6"
+        className="black-90-desktop info-box-item col-md-6"
       />
       <img
         src="/black-90.png"
         alt="black-circles"
-        class="black-90-mobile info-box-item col-md-6"
+        className="black-90-mobile info-box-item col-md-6"
       />
-      <div class="col-md-6 info-box-item">
-        <p class="info-box-title">{t(`tabContent.${content}.subtitle`)}</p>
-        <p class="info-box-description">
+      <div className="col-md-6 info-box-item">
+        <p className="info-box-title">{t(`tabContent.${content}.subtitle`)}</p>
+        <p className="info-box-description">
           {t(`tabContent.${content}.body1`)}
           <br />
           {t(`tabContent.${content}.body2`)}
         </p>
         <Link
           href="https://app.projectdavi.eth.limo/#/"
-          class="button btn btn-primary btn-lg"
+          className="button btn btn-primary btn-lg"
           role="button"
           target="_blank"
           rel="noreferrer"
         >
           {t(`tabContent.${content}.button`)}
-          <img src="/arrow.png" alt="arrow" class="arrow" />
+          <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
       </div>
     </div>
