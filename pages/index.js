@@ -30,8 +30,9 @@ export default function Home() {
         onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
       ></div>
       <div className="square-container-mobile">
-        <video width="320" height="240" loop autoPlay>
-          <source src="./movie.mp4" type="video/mp4" />
+        <video loop autoPlay muted>
+          <source src="./movie.mov" type="video/quicktime" />
+          <source src="./movie.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -55,7 +56,8 @@ export default function Home() {
             </div>
             <div className="square-container-desktop col-md-6">
               <video loop autoPlay muted>
-                <source src="./movie.mp4" type="video/mp4" />
+                <source src="./movie.mov" type="video/quicktime" />
+                <source src="./movie.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
             </div>
