@@ -4,12 +4,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslation, LanguageSwitcher } from "next-export-i18n";
-import { useRouter } from "next/router";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState(1);
+  const [email, setEmail] = useState();
   const { t } = useTranslation();
-  const router = useRouter();
 
   const tabContent = ["decentralization", "autonomy", "flexible"];
 
@@ -30,7 +30,10 @@ export default function Home() {
         onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
       ></div>
       <div className="square-container-mobile">
-        <img src="/400px.gif" alt="square-davi" className="square-img" />
+        <video width="320" height="240" loop autoPlay>
+          <source src="./movie.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="container-fluid d-flex h-100 w-80 mx-auto flex-column">
         <main role="main" className="cover">
@@ -51,7 +54,10 @@ export default function Home() {
               </Link>
             </div>
             <div className="square-container-desktop col-md-6">
-              <img src="/400px.gif" alt="square-davi" className="square-img" />
+              <video loop autoPlay muted>
+                <source src="./movie.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </main>
@@ -275,6 +281,37 @@ export default function Home() {
           </Link>
           <span className="separator"></span>
         </div>
+        <MailchimpSubscribe
+          url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
+          render={({ subscribe, status, message }) => (
+            <div>
+              <form>
+                <div className="form-input">
+                  <input
+                    required
+                    id="email-input"
+                    name="email"
+                    type="email"
+                    placeholder="Sign up to learn more"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="sub-form-btn">
+                  <button
+                    disabled={status == "sending"}
+                    type="submit"
+                    className="form-btn"
+                    onClick={() => subscribe({ EMAIL: email })}
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+              {message}
+            </div>
+          )}
+        />
       </footer>
     </>
   );
