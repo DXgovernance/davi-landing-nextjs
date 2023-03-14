@@ -283,6 +283,11 @@ export default function Home() {
           </Link>
           <span className="separator"></span>
         </div>
+        <script
+          src="https://right-secure.project-davi.dev/script.js"
+          data-site="RJPMQAGT"
+          defer
+        ></script>
         <MailchimpSubscribe
           url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
           render={({ subscribe, status, message }) => (
