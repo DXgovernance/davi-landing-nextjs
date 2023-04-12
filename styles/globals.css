@@ -431,7 +431,7 @@ border-radius: 32px;
      display: none;
    }
    .square-container-mobile {
-     display: none;
+     display: block;
      width: 300px;
    }
    .square-img {
