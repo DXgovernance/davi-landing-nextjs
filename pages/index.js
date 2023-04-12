@@ -63,7 +63,7 @@ export default function Home() {
                       />
                       <div>
                         <img
-                          src="/enterArrow.png"
+                          src="/arrowblack.svg"
                           alt="arrow"
                           className="arrow"
                           disabled={status == "sending"}
@@ -186,7 +186,7 @@ export default function Home() {
                       />
                       <div>
                         <img
-                          src="/enterArrow.png"
+                          src="/arrowblack.svg"
                           alt="arrow"
                           className="arrow"
                           disabled={status == "sending"}
@@ -213,7 +213,7 @@ export default function Home() {
           rel="noreferrer"
         >
           TWITTER
-          <img src="/arrow.png" alt="arrow" className="arrow" />
+          <img src="/arrow.svg" alt="arrow" className="arrow" />
         </Link>
         <Link
           href="https://project-davi.dev/#/gnosis/"
@@ -223,7 +223,7 @@ export default function Home() {
           rel="noreferrer"
         >
           DEMO
-          <img src="/arrow.png" alt="arrow" className="arrow" />
+          <img src="/arrow.svg" alt="arrow" className="arrow" />
         </Link>
         <Link
           href="https://discord.gg/4QXEJQkvHH"
@@ -233,7 +233,7 @@ export default function Home() {
           rel="noreferrer"
         >
           DISCORD
-          <img src="/arrow.png" alt="arrow" className="arrow" />
+          <img src="/arrow.svg" alt="arrow" className="arrow" />
         </Link>
       </div>
 
