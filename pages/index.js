@@ -3,14 +3,14 @@ import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation, useSelectedLanguage } from "next-export-i18n";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 export default function Home() {
   // const [selectedTab, setSelectedTab] = useState(1);
   const [email, setEmail] = useState();
   const { t, i18n } = useTranslation();
-  console.log(i18n?.language);
+  const { lang } = useSelectedLanguage();
   // const tabContent = ["decentralization", "autonomy", "flexible"];
 
   return (
