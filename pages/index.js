@@ -29,10 +29,9 @@ export default function Home() {
       </header>
       <div className="square-container-mobile">
         <video
-          autoplay
-          muted
-          playsinline
           loop
+          autoPlay
+          muted
           style={{ width: "300px", marginLeft: "1rem" }}
         >
           <source src="./movie.mov" type="video/quicktime" />
@@ -79,7 +78,7 @@ export default function Home() {
               />
             </div>
             <div className="square-container-desktop col-md-6">
-              <video autoplay muted playsinline loop>
+              <video loop autoPlay muted>
                 <source src="./movie.mov" type="video/quicktime" />
                 <source src="./movie.webm" type="video/webm" />
                 Your browser does not support the video tag.
