@@ -2,7 +2,7 @@
 import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   useTranslation,
   useSelectedLanguage,
@@ -14,6 +14,21 @@ export default function Home() {
   const [email, setEmail] = useState();
   const { t } = useTranslation();
   const { lang } = useSelectedLanguage();
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    video.addEventListener("canplay", () => {
+      video.play();
+    });
+
+    return () => {
+      video.removeEventListener("canplay", () => {
+        video.play();
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -29,9 +44,11 @@ export default function Home() {
       </header>
       <div className="square-container-mobile">
         <video
-          loop
-          autoPlay
+          ref={videoRef}
+          autoplay
           muted
+          playsinline
+          loop
           style={{ width: "300px", marginLeft: "1rem" }}
         >
           <source src="./movie.mov" type="video/quicktime" />
