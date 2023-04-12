@@ -1,49 +1,21 @@
 {
   "projectDavi": "Project DAVI",
-  "nextGen": "日本語",
-  "title": "A decentralized on-chain governance interface for DAOs.日本語",
-  "subTitle": "Bringing accessible autonomy to the masses",
-  "cta": "TRY THE DAPP",
+  "title": "Enable Community Freedom.",
+  "subTitle": "All your tools in one place",
+  "cta": "Sign up to hear more",
   "featureHighlights": {
     "actionBuilder": {
-      "title": "Create action packed proposals",
+      "title": "Real autonomy",
       "description":  "DAVI makes on-chain governance <strong> accessible</strong>, whether building proposals or voting on them, <strong>everybody</strong> can partake in governance."
     },
     "flexible": {
-      "title": "YOUR DAO YOUR WAY",
-      "description": "DAVI supports multiple type of DAOs. From normal ERC20, to soulbound, even a hybrid system. <strong>Handle it your way</strong> with DAVI. <br /> <strong> Want your DAO on DAVI?</strong>",
-      "extra": "let us know"
+      "title": "YOUR COMMUNITY YOUR WAY",
+      "description": "From discord communities to soulbound/NFT/ERC20 on-chain DAOs - this is where they can cooridnate",
+      "extra": "Want your community supported?"
     },
     "social": {
       "title": "Social",
-      "description": "DAVI recognizes that not everything can be on chain. So we also include a built in forum closely integrated with governance. <br /> Built on orbis and ceramic, decentralization is at the core of what we do."
-    }
-  },
-  "tabContent": {
-    "decentralization": {
-      "title": "Fully Decentralized",
-      "subtitle": "Decentralized but for real",
-      "body1": "On chain governance as a first class citizen.",
-      "body2":
-        "With RPC backups ontop decentralized subgraph and even our discussions using orbis and ceramic",
-      "button": "Try real decentralization"
-    },
-    "autonomy": {
-      "title": "Autonomy for all Communities",
-      "subtitle": "Want to see what a DAO can really do?",
-      "body1":
-        "If you are intrigued by accessible autonomy, flexibility to choose your DAO platform or integrated community tools then give it a go.",
-      "body2":
-        "DXdao's vision to enable community freedom is being lead by DAVI and we want you to be one of those communities",
-      "button": "Enable your community"
-    },
-    "flexible": {
-      "title": "Your DAO your Way",
-      "subtitle": "Have specific needs?",
-      "body1": "There are a lot of DAO solutions out there, DAVI aims to .",
-      "body2":
-        "From liquid ERC20 governance, to soulbound reputation, hybrid systems and even more coming soon.",
-      "button": "Choose your DAO"
+      "description": "Know exactly what your communities are up to in our social feed. Built to be decentralized and interoperable with orbis."
     }
   }
 }
