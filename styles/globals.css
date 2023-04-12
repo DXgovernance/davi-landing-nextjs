@@ -40,17 +40,6 @@
    width: 100%;
  }
  
- .floating-dxdao {
-   background-image: url('./../public/dxdaoarrow.svg');
-   right: 20px;
-   bottom: 45%;
-   position: absolute;
-   height: 159px;
-   width: 32px;
-   z-index: 9;
-   cursor: pointer;
- }
- 
  .square-container-desktop {
    text-align: center;
  }
