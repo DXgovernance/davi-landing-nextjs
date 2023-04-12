@@ -64,7 +64,7 @@ export default function Home() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
-                      <div className="sub-form-btn">
+                      <div>
                         <img
                           src="/enterArrow.png"
                           alt="arrow"
@@ -92,7 +92,7 @@ export default function Home() {
         <section className="info-box-section">
           <article className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/en1.png"}
+              src={lang == "ja" ? "/ja1.png" : "/en1.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -110,7 +110,7 @@ export default function Home() {
           </article>
           <article className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/en1.png"}
+              src={lang == "ja" ? "/ja1.png" : "/en1.png"}
               alt="mac-screenshot"
               className="black-90-mobile info-box-item col-md-6"
             />
@@ -135,14 +135,14 @@ export default function Home() {
               </div>
             </div>
             <img
-              src={lang == "ja" ? "" : "/en2.png"}
+              src={lang == "ja" ? "/ja2.png" : "/en2.png"}
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
           </article>
           <div className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/en3.png"}
+              src={lang == "ja" ? "/ja3.png" : "/en3.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -161,6 +161,42 @@ export default function Home() {
         </section>
       </div>
       {/* <div className="learn-more"> */}
+      {/*  */}
+      <section class="socials">
+        <div class="socials-section">
+          <a
+            href="#"
+            class="btn-social button btn btn-primary btn-lg"
+            role="button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TWITTER
+            <img src="assets/arrow.png" alt="arrow" class="arrow" />
+          </a>
+          <a
+            href="https://discord.gg/4QXEJQkvHH"
+            class="btn-social button btn btn-primary btn-lg"
+            role="button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            DISCORD
+            <img src="assets/arrow.png" alt="arrow" class="arrow" />
+          </a>
+          <a
+            href="https://github.com/DXgovernance"
+            class="btn-social button btn btn-primary btn-lg"
+            role="button"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GITHUB
+            <img src="assets/arrow.png" alt="arrow" class="arrow" />
+          </a>
+        </div>
+      </section>
+      {/*  */}
       <div className="socials-section">
         <Link
           href="https://twitter.com/ProjectDAVI"

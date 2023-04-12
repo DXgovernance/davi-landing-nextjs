@@ -130,7 +130,7 @@ line-height: 39px;
  }
  
  .arrow {
-   width: 20px;
+   width: 32px;
    margin-left: 5px;
    margin-bottom: 5px;
  }
@@ -173,6 +173,18 @@ line-height: 39px;
    justify-content: space-around;
    margin: 100px 0px;
  }
+
+
+.socials {
+  background-image: url('./../public/bg-circles.png');
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  /* align-items: center;
+  justify-content: center; */
+}
+
  
  .bottom-modal-top {
    display: flex;
@@ -339,7 +351,7 @@ text-transform: uppercase;
   border: 1px solid rgb(48, 51, 56);
   border-radius: 1.5rem;
   padding: 0.5rem 0.8rem;
-  width: 350px;
+  width: 290px;
 }
 
 .input {
