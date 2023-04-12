@@ -3,7 +3,11 @@ import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation, useSelectedLanguage } from "next-export-i18n";
+import {
+  useTranslation,
+  useSelectedLanguage,
+  LanguageSwitcher,
+} from "next-export-i18n";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 export default function Home() {
@@ -48,30 +52,31 @@ export default function Home() {
               <MailchimpSubscribe
                 url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
                 render={({ subscribe, status, message }) => (
-                  <form className="inputWrapper">
-                    <input
-                      className="input"
-                      required
-                      id="email-input"
-                      name="email"
-                      type="email"
-                      placeholder="Sign up to learn more"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <div className="sub-form-btn">
-                      <img
-                        src="/arrow.png"
-                        alt="arrow"
-                        className="arrow"
-                        disabled={status == "sending"}
-                        type="submit"
-                        onClick={() => subscribe({ EMAIL: email })}
+                  <div>
+                    <form className="inputWrapper">
+                      <input
+                        className="input"
+                        required
+                        id="email-input"
+                        name="email"
+                        type="email"
+                        placeholder={t("cta")}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
-                    </div>
-
+                      <div className="sub-form-btn">
+                        <img
+                          src="/enterArrow.png"
+                          alt="arrow"
+                          className="arrow"
+                          disabled={status == "sending"}
+                          type="submit"
+                          onClick={() => subscribe({ EMAIL: email })}
+                        />
+                      </div>
+                    </form>
                     {message}
-                  </form>
+                  </div>
                 )}
               />
             </div>
@@ -87,7 +92,7 @@ export default function Home() {
         <section className="info-box-section">
           <article className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/Frame 480968402.png"}
+              src={lang == "ja" ? "" : "/en1.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -105,7 +110,7 @@ export default function Home() {
           </article>
           <article className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/Frame 48096840.png"}
+              src={lang == "ja" ? "" : "/en1.png"}
               alt="mac-screenshot"
               className="black-90-mobile info-box-item col-md-6"
             />
@@ -130,14 +135,14 @@ export default function Home() {
               </div>
             </div>
             <img
-              src={lang == "ja" ? "" : "/Frame 48096840.png"}
+              src={lang == "ja" ? "" : "/en2.png"}
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
           </article>
           <div className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "" : "/Frame 48096842.png"}
+              src={lang == "ja" ? "" : "/en3.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -298,9 +303,11 @@ export default function Home() {
           defer
         ></script>
       </footer> */}
-      <strong className="madeBy">
-        Made with ❤️ by The Internet Community Company (ex-DXdao alumni)
-      </strong>
+
+      <LanguageSwitcher lang={lang == "ja" ? "en" : "ja"}>
+        Switch language
+      </LanguageSwitcher>
+      <strong className="madeBy">{t("madeBy")}</strong>
     </>
   );
 }

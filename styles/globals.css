@@ -339,8 +339,7 @@ text-transform: uppercase;
   border: 1px solid rgb(48, 51, 56);
   border-radius: 1.5rem;
   padding: 0.5rem 0.8rem;
-  background-color: transparent;
-  outline: rgb(115, 121, 119) solid 1px;
+  width: 350px;
 }
 
 .input {
@@ -353,6 +352,12 @@ text-transform: uppercase;
     width: 100%;
     box-sizing: border-box;
     outline: none;
+
+    font-family: 'Eurostile';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 120%;
 }
  
 
