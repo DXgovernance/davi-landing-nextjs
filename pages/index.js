@@ -9,9 +9,9 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 export default function Home() {
   // const [selectedTab, setSelectedTab] = useState(1);
   const [email, setEmail] = useState();
-  const { t } = useTranslation();
-
-  const tabContent = ["decentralization", "autonomy", "flexible"];
+  const { t, i18n } = useTranslation();
+  console.log(i18n?.language);
+  // const tabContent = ["decentralization", "autonomy", "flexible"];
 
   return (
     <>
@@ -26,7 +26,12 @@ export default function Home() {
         />
       </header>
       <div className="square-container-mobile">
-        <video loop autoPlay muted>
+        <video
+          loop
+          autoPlay
+          muted
+          style={{ width: "300px", marginLeft: "1rem" }}
+        >
           <source src="./movie.mov" type="video/quicktime" />
           <source src="./movie.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -81,7 +86,7 @@ export default function Home() {
         <section className="info-box-section">
           <article className="modal-body row info-box-article">
             <img
-              src="/Frame 480968402.png"
+              src={i18n?.language == "ja" ? "" : "/Frame 480968402.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -99,7 +104,7 @@ export default function Home() {
           </article>
           <article className="modal-body row info-box-article">
             <img
-              src="/Frame 48096840.png"
+              src={i18n?.language == "ja" ? "" : "/Frame 48096840.png"}
               alt="mac-screenshot"
               className="black-90-mobile info-box-item col-md-6"
             />
@@ -124,14 +129,14 @@ export default function Home() {
               </div>
             </div>
             <img
-              src="/Frame 48096840.png"
+              src={i18n?.language == "ja" ? "" : "/Frame 48096840.png"}
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
           </article>
           <div className="modal-body row info-box-article">
             <img
-              src="/Frame 48096842.png"
+              src={i18n?.language == "ja" ? "" : "/Frame 48096842.png"}
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
