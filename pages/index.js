@@ -3,11 +3,11 @@ import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
 import { useState } from "react";
-import { useTranslation, LanguageSwitcher } from "next-export-i18n";
+import { useTranslation } from "next-export-i18n";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 export default function Home() {
-  const [selectedTab, setSelectedTab] = useState(1);
+  // const [selectedTab, setSelectedTab] = useState(1);
   const [email, setEmail] = useState();
   const { t } = useTranslation();
 
@@ -25,10 +25,6 @@ export default function Home() {
           className="title-image"
         />
       </header>
-      <div
-        className="floating-dxdao"
-        onClick={() => window.open("https://dxdao.eth.limo", "_blank")}
-      ></div>
       <div className="square-container-mobile">
         <video loop autoPlay muted>
           <source src="./movie.mov" type="video/quicktime" />
@@ -40,19 +36,38 @@ export default function Home() {
         <main role="main" className="cover">
           <div className="modal-body row">
             <div className="main-text-container col-md-6">
-              {/* <p className="heading-main-text">{t("nextGen")}</p> */}
               <p className="main-text-body">{t("title")}</p>
               <p className="main-text-subtitle">{t("subTitle")}</p>
-              <Link
-                href="https://app.projectdavi.eth.limo/#/"
-                className="button btn btn-primary btn-lg"
-                role="button"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("cta")}
-                <img src="/arrow.png" alt="arrow" className="arrow" />
-              </Link>
+
+              <MailchimpSubscribe
+                url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
+                render={({ subscribe, status, message }) => (
+                  <form className="inputWrapper">
+                    <input
+                      className="input"
+                      required
+                      id="email-input"
+                      name="email"
+                      type="email"
+                      placeholder="Sign up to learn more"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <div className="sub-form-btn">
+                      <img
+                        src="/arrow.png"
+                        alt="arrow"
+                        className="arrow"
+                        disabled={status == "sending"}
+                        type="submit"
+                        onClick={() => subscribe({ EMAIL: email })}
+                      />
+                    </div>
+
+                    {message}
+                  </form>
+                )}
+              />
             </div>
             <div className="square-container-desktop col-md-6">
               <video loop autoPlay muted>
@@ -66,7 +81,7 @@ export default function Home() {
         <section className="info-box-section">
           <article className="modal-body row info-box-article">
             <img
-              src="/mac1.png"
+              src="/Frame 480968402.png"
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -84,7 +99,7 @@ export default function Home() {
           </article>
           <article className="modal-body row info-box-article">
             <img
-              src="/mac2.png"
+              src="/Frame 48096840.png"
               alt="mac-screenshot"
               className="black-90-mobile info-box-item col-md-6"
             />
@@ -109,14 +124,14 @@ export default function Home() {
               </div>
             </div>
             <img
-              src="/mac2.png"
+              src="/Frame 48096840.png"
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
           </article>
           <div className="modal-body row info-box-article">
             <img
-              src="/mac3.png"
+              src="/Frame 48096842.png"
               alt="mac-screenshot"
               className="info-box-item col-md-6"
             />
@@ -134,19 +149,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section className="learn-more">
-        <div className="bottom-modal-top">
-          <TabHeadings
-            content={tabContent}
-            active={selectedTab}
-            changeTab={setSelectedTab}
-            t={t}
-          />
-        </div>
-        <div className="bottom-modal-bottom">
-          <TabContent content={tabContent[selectedTab]} t={t} />
-        </div>
-      </section>
+      {/* <div className="learn-more"> */}
       <div className="socials-section">
         <Link
           href="https://twitter.com/ProjectDAVI"
@@ -159,6 +162,16 @@ export default function Home() {
           <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
         <Link
+          href="https://project-davi.dev/#/gnosis/"
+          className="btn-social button btn btn-primary btn-lg"
+          role="button"
+          target="_blank"
+          rel="noreferrer"
+        >
+          DEMO
+          <img src="/arrow.png" alt="arrow" className="arrow" />
+        </Link>
+        <Link
           href="https://discord.gg/4QXEJQkvHH"
           className="btn-social button btn btn-primary btn-lg"
           role="button"
@@ -168,18 +181,8 @@ export default function Home() {
           DISCORD
           <img src="/arrow.png" alt="arrow" className="arrow" />
         </Link>
-        <Link
-          href="https://github.com/DXgovernance"
-          className="btn-social button btn btn-primary btn-lg"
-          role="button"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GITHUB
-          <img src="/arrow.png" alt="arrow" className="arrow" />
-        </Link>
       </div>
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="link-block">
           <h2>ABOUT</h2>
           <span className="separator"></span>
@@ -288,92 +291,10 @@ export default function Home() {
           data-site="RJPMQAGT"
           defer
         ></script>
-        <MailchimpSubscribe
-          url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
-          render={({ subscribe, status, message }) => (
-            <div>
-              <form>
-                <div className="form-input">
-                  <input
-                    required
-                    id="email-input"
-                    name="email"
-                    type="email"
-                    placeholder="Sign up to learn more"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="sub-form-btn">
-                  <button
-                    disabled={status == "sending"}
-                    type="submit"
-                    className="form-btn"
-                    onClick={() => subscribe({ EMAIL: email })}
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-              {message}
-            </div>
-          )}
-        />
-      </footer>
+      </footer> */}
+      <strong className="madeBy">
+        Made with ❤️ by The Internet Community Company (ex-DXdao alumni)
+      </strong>
     </>
-  );
-}
-
-function TabHeadings({ content, active, changeTab, t }) {
-  return content.map((contentObj, index) => (
-    <div
-      key={index}
-      onClick={() => changeTab(index)}
-      className={active === index ? "sub-title-primary" : "sub-titles"}
-    >
-      <img
-        src={`/${index}-${active === index ? "black" : "green"}.svg`}
-        className="header-icon"
-        alt="header-icon"
-      />
-      <p key={index} style={{ margin: "auto" }}>
-        {t(`tabContent.${contentObj}.title`)}
-      </p>
-    </div>
-  ));
-}
-
-function TabContent({ content, t }) {
-  return (
-    <div className="modal-body row info-box-article">
-      <img
-        src="/black-90.png"
-        alt="black-circles"
-        className="black-90-desktop info-box-item col-md-6"
-      />
-      <img
-        src="/black-90.png"
-        alt="black-circles"
-        className="black-90-mobile info-box-item col-md-6"
-      />
-      <div className="col-md-6 info-box-item">
-        <p className="info-box-title">{t(`tabContent.${content}.subtitle`)}</p>
-        <p className="info-box-description">
-          {t(`tabContent.${content}.body1`)}
-          <br />
-          {t(`tabContent.${content}.body2`)}
-        </p>
-        <Link
-          href="https://app.projectdavi.eth.limo/#/"
-          className="button btn btn-primary btn-lg"
-          role="button"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {t(`tabContent.${content}.button`)}
-          <img src="/arrow.png" alt="arrow" className="arrow" />
-        </Link>
-      </div>
-    </div>
   );
 }

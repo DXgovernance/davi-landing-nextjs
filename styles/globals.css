@@ -15,12 +15,18 @@
    * Base structure
    */
  
- @font-face {
-   font-family: 'Inter';
-   src: url('../public/Inter-VariableFont_slnt,wght.ttf') format('truetype');
-   font-weight: 100 1000;
- }
+   @font-face {
+    font-family: 'Inter';
+    src: url('../public/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 100 1000;
+  }
  
+  @font-face {
+    font-family: 'Eurostile';
+    src: url('../public/Eurostile-Bold.ttf') format('truetype');
+    font-weight: 100 1000;
+  }
+   
  body {
    background-color: #dffd56;
    -ms-flex-pack: center;
@@ -74,11 +80,24 @@
    line-height: 3rem;
    font-weight: 500;
    margin-bottom: 12px;
+   font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 120%;
  }
  
  .main-text-subtitle {
    font-size: 2rem;
    margin-bottom: 24px;
+   font-family: 'Eurostile';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+
+letter-spacing: 0.04em;
+text-transform: uppercase;
  }
  
  .button {
@@ -114,6 +133,11 @@
  .btn-social {
    font-size: 2rem;
    padding: 10px 25px;
+   font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 39px;
  }
  
  .arrow {
@@ -244,11 +268,25 @@
  
  .info-box-description {
    margin-top: 20px;
+   font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
  }
  
  .info-box-title {
    font-size: 3rem;
    line-height: 3rem;
+   font-family: 'Eurostile';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+/* or 58px */
+
+letter-spacing: 0.04em;
+text-transform: uppercase;
  }
  
  .social-btn {
@@ -296,7 +334,39 @@
 .header-icon {
   width: 48px;
 }
+.madeBy {
+  position: absolute;
+  /* bottom: 0; */
+  right: 20px;
+  height: 50px;
+}
+
+.inputWrapper{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 1rem;
+  border: 1px solid rgb(48, 51, 56);
+  border-radius: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: transparent;
+  outline: rgb(115, 121, 119) solid 1px;
+}
+
+.input {
+  color: black;
+    font-weight: 500;
+    text-align: left;
+    border: none;
+    background: none transparent;
+    box-shadow: none;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
  
+
  @media screen and (max-width: 600px) {
 
     .floating-dxdao {
