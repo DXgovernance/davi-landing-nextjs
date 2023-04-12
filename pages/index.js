@@ -248,7 +248,7 @@ export default function Home() {
           <img src="/arrow.svg" alt="arrow" className="arrow" />
         </Link>
         <Link
-          href="https://discord.gg/4QXEJQkvHH"
+          href="https://discord.gg/pwHfY6ndUN"
           className="btn-social button btn btn-primary btn-lg"
           role="button"
           target="_blank"
