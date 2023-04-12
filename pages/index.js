@@ -2,7 +2,7 @@
 import Head from "next/head";
 // import img from "next/img";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import {
   useTranslation,
   useSelectedLanguage,
@@ -14,21 +14,6 @@ export default function Home() {
   const [email, setEmail] = useState();
   const { t } = useTranslation();
   const { lang } = useSelectedLanguage();
-
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    video.addEventListener("canplay", () => {
-      video.play();
-    });
-
-    return () => {
-      video.removeEventListener("canplay", () => {
-        video.play();
-      });
-    };
-  }, []);
 
   return (
     <>
@@ -44,7 +29,6 @@ export default function Home() {
       </header>
       <div className="square-container-mobile">
         <video
-          ref={videoRef}
           autoplay
           muted
           playsinline
@@ -108,7 +92,7 @@ export default function Home() {
             <img
               src={lang == "ja" ? "/ja1.png" : "/en1.png"}
               alt="mac-screenshot"
-              className="info-box-item col-md-6"
+              className="black-90-desktop info-box-item col-md-6"
             />
             <div className="col-md-6 info-box-item">
               <p className="info-box-title">
@@ -153,12 +137,17 @@ export default function Home() {
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
+            <img
+              src={lang == "ja" ? "/ja2.png" : "/en2.png"}
+              alt="mac-screenshot"
+              className="black-90-mobile info-box-item col-md-6"
+            />
           </article>
           <div className="modal-body row info-box-article">
             <img
               src={lang == "ja" ? "/ja3.png" : "/en3.png"}
               alt="mac-screenshot"
-              className="info-box-item col-md-6"
+              className="black-90-desktop info-box-item col-md-6"
             />
             <div className="col-md-6 info-box-item">
               <p className="info-box-title">
@@ -171,6 +160,11 @@ export default function Home() {
                 }}
               />
             </div>
+            <img
+              src={lang == "ja" ? "/ja3.png" : "/en3.png"}
+              alt="mac-screenshot"
+              className="black-90-mobile info-box-item col-md-6"
+            />
           </div>
         </section>
       </div>
