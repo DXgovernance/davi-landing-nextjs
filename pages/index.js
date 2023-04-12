@@ -14,7 +14,6 @@ export default function Home() {
   const [email, setEmail] = useState();
   const { t } = useTranslation();
   const { lang } = useSelectedLanguage();
-  console.log({ lang });
 
   return (
     <>
