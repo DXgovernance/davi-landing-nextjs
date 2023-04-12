@@ -168,17 +168,44 @@ line-height: 39px;
  }
  
  .socials-section {
-   width: 100%;
-   display: flex;
-   justify-content: space-around;
-   margin: 100px 0px;
- }
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.language-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+}
+
+.language {
+  box-sizing: border-box;
+cursor: pointer;
+  /* Auto layout */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6px 12px;
+  gap: 10px;
+  
+  
+  border: 1px solid #000000;
+  border-radius: 12px;
+}
 
 
 .socials {
-  background-image: url('./../public/bg-circles.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('./../public/bg-circles.png');
+  background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   display: grid;
   place-items: center;
   /* align-items: center;
@@ -371,6 +398,20 @@ font-weight: 700;
 font-size: 16px;
 line-height: 120%;
 }
+
+.sign-up-modal {
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 48px;
+
+width: 70%;
+/* height: 30vh; */
+
+background: #DFFD56;
+border-radius: 32px;
+}
  
 
  @media screen and (max-width: 600px) {
@@ -525,6 +566,8 @@ line-height: 120%;
     left: 20px;
     height: 71px;
   }
-  
+  .socials {
+    display:none;
+  }
  }
  

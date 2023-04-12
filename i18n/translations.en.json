@@ -1,8 +1,11 @@
 {
   "projectDavi": "Project DAVI",
-  "title": "Enable Community Freedom.",
+  "title": "Enable Community Freedom",
   "subTitle": "All your tools in one place",
-  "cta": "Sign up to hear more",
+  "signup": {
+    "cta": "Sign up to hear more",
+    "why":"Sign up to learn more, get early access to new features and to stay in the loop."
+  },
   "madeBy": "Made with ❤️ by The Internet Community Company (ex-DXdao alumni)",
   "featureHighlights": {
     "actionBuilder": {

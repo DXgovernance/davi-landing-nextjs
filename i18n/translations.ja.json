@@ -1,8 +1,11 @@
 {
   "projectDavi": "Project DAVI",
-  "title": "コミュニティの自由を可能にする。",
+  "title": "コミュニティの自由を可能にする",
   "subTitle": "必要な機能、全部これ一つで完結",
-  "cta": "サインアップ",
+  "signup": {
+    "cta": "サインアップ",
+    "why":"サインアップして詳しい情報を受け取る"
+  },
   "madeBy": "インターネットコミュニティ会社が❤️で作った(DXdao出身のチーム)",
   "featureHighlights": {
     "actionBuilder": {
@@ -11,8 +14,8 @@
     },
     "flexible": {
       "title": "コミュニティを思うままに",
-      "description": "DAVIはデイスコードコミュニティから、soulbound/NFT/ERC20 on-chain DAOまで幅広く対応。",
-      "extra": "DAVIにあなたのコミュニティを作りませんか？"
+      "description": "DAVIはデイスコードコミュニティから、soulbound/NFT/ERC20 オンチェーンDAOまで幅広く対応。",
+      "extra": "DAVIにあなたのコミュニティが欲しいですか？"
     },
     "social": {
       "title": "ソーシャル",
