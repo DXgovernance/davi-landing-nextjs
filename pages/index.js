@@ -94,6 +94,11 @@ export default function Home() {
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
+            <img
+              src={lang == "ja" ? "/ja1.png" : "/en1.png"}
+              alt="mac-screenshot"
+              className="black-90-mobile info-box-item col-md-6"
+            />
             <div className="col-md-6 info-box-item">
               <p className="info-box-title">
                 {t("featureHighlights.actionBuilder.title")}
@@ -108,7 +113,7 @@ export default function Home() {
           </article>
           <article className="modal-body row info-box-article">
             <img
-              src={lang == "ja" ? "/ja1.png" : "/en1.png"}
+              src={lang == "ja" ? "/ja2.png" : "/en2.png"}
               alt="mac-screenshot"
               className="black-90-mobile info-box-item col-md-6"
             />
@@ -137,17 +142,17 @@ export default function Home() {
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
             />
-            <img
-              src={lang == "ja" ? "/ja2.png" : "/en2.png"}
-              alt="mac-screenshot"
-              className="black-90-mobile info-box-item col-md-6"
-            />
           </article>
           <div className="modal-body row info-box-article">
             <img
               src={lang == "ja" ? "/ja3.png" : "/en3.png"}
               alt="mac-screenshot"
               className="black-90-desktop info-box-item col-md-6"
+            />
+            <img
+              src={lang == "ja" ? "/ja3.png" : "/en3.png"}
+              alt="mac-screenshot"
+              className="black-90-mobile info-box-item col-md-6"
             />
             <div className="col-md-6 info-box-item">
               <p className="info-box-title">
@@ -160,17 +165,12 @@ export default function Home() {
                 }}
               />
             </div>
-            <img
-              src={lang == "ja" ? "/ja3.png" : "/en3.png"}
-              alt="mac-screenshot"
-              className="black-90-mobile info-box-item col-md-6"
-            />
           </div>
         </section>
       </div>
       {/*  */}
-      <section class="socials">
-        <div class="sign-up-modal">
+      <section className="socials">
+        <div className="sign-up-modal">
           <div className="modal-body row info-box-article">
             <img
               src="/signup.png"
