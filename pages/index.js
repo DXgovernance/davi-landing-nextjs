@@ -79,7 +79,7 @@ export default function Home() {
               />
             </div>
             <div className="square-container-desktop col-md-6">
-              <video loop autoPlay muted>
+              <video autoplay muted playsinline loop>
                 <source src="./movie.mov" type="video/quicktime" />
                 <source src="./movie.webm" type="video/webm" />
                 Your browser does not support the video tag.

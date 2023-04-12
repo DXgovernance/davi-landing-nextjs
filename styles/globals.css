@@ -431,7 +431,7 @@ border-radius: 32px;
      display: none;
    }
    .square-container-mobile {
-     display: block;
+     display: none;
      width: 300px;
    }
    .square-img {
@@ -442,19 +442,19 @@ border-radius: 32px;
      align-self: center;
    }
  
-   .main-text-body {
+   .main-text-body {font-family: 'Eurostile';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+   }
+ 
+   .main-text-subtitle {
     font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 32px;
-line-height: 120%;
-   }
- 
-   .main-text-subtitle {font-family: 'Eurostile';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
+font-size: 16px;
+line-height: 150%;
    }
  
    .button {
