@@ -50,7 +50,13 @@ export default function Home() {
                 url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
                 render={({ subscribe, status, message }) => (
                   <div>
-                    <form className="inputWrapper">
+                    <form
+                      className="inputWrapper"
+                      onSubmit={(event) => {
+                        event.preventDefault();
+                        subscribe({ EMAIL: email });
+                      }}
+                    >
                       <input
                         className="input"
                         required
@@ -183,7 +189,13 @@ export default function Home() {
                 url={`https://limo.us14.list-manage.com/subscribe/post?u=7bb4af61551e82700ced40ce0&id=ddad2a9beb`}
                 render={({ subscribe, status, message }) => (
                   <div>
-                    <form className="inputWrapper">
+                    <form
+                      className="inputWrapper"
+                      onSubmit={(event) => {
+                        event.preventDefault();
+                        subscribe({ EMAIL: email });
+                      }}
+                    >
                       <input
                         className="input"
                         required
